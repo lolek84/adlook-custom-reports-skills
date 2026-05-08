@@ -245,7 +245,7 @@ const server = http.createServer((req, res) => {
     const proto = req.headers['x-forwarded-proto'] || 'https';
     const host  = req.headers['x-forwarded-host'] || req.headers.host;
     const messageUrl = `${proto}://${host}/message?sessionId=${sessionId}`;
-    sendSSERaw(res, 'endpoint', JSON.stringify(messageUrl));
+    sendSSERaw(res, 'endpoint', messageUrl);
 
     // Keepalive ping every 25 seconds to prevent Render from closing idle connections
     const keepalive = setInterval(() => {
