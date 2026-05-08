@@ -241,8 +241,10 @@ const server = http.createServer((req, res) => {
 
     sessions.set(sessionId, { res });
 
-    // Send the message endpoint URL to the client
-    const messageUrl = `/message?sessionId=${sessionId}`;
+    // Send the message endpoint URL to the client (absolute URL required by mcp-remote)
+    const proto = req.headers['x-forwarded-proto'] || 'https';
+    const host  = req.headers['x-forwarded-host'] || req.headers.host;
+    const messageUrl = `${proto}://${host}/message?sessionId=${sessionId}`;
     sendSSERaw(res, 'endpoint', JSON.stringify(messageUrl));
 
     // Keepalive ping every 25 seconds to prevent Render from closing idle connections
