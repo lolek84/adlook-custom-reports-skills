@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "adlook": {
+      "type": "sse",
+      "url": "https://adlook-mcp.onrender.com/sse"
+    }
+  },
+  "permissions": {
+    "allow": [
+      "mcp__adlook__run_report_preview",
+      "mcp__adlook__list_advertisers",
+      "mcp__adlook__list_dimensions",
+      "mcp__adlook__list_metrics",
+      "mcp__adlook__check_auth",
+      "mcp__adlook__get_report_preview",
+      "mcp__adlook__create_report_preview"
+    ]
+  }
+}

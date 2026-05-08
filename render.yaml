@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: adlook-skills-mcp
+    runtime: node
+    rootDir: skills-server-remote
+    buildCommand: echo "no build needed"
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health

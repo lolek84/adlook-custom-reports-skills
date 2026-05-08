@@ -1,0 +1,14 @@
+{
+  "name": "adlook-skills-mcp-remote",
+  "version": "1.0.0",
+  "description": "Adlook DSP Skills MCP Server — SSE transport, deployable to Render / Railway / Fly.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "PORT=3001 node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}

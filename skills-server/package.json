@@ -1,0 +1,13 @@
+{
+  "name": "adlook-skills-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing Adlook DSP skill prompts to Claude Desktop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}
